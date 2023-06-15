@@ -19,8 +19,21 @@
         if(locomocao=="vp"){
             let n = salario-(salario*0.06)
             let ad = n + 200
-            alert(``)
+        alert(`A empresa fornecerá um adicional, seu novo salário é R$${ad.toFixed(2).replace(".",",")}`)
         }
+        else if(locomocao=="tp"){
+            let ad = salario + 150
+        alert(`A empresa fornecerá um adicional, seu novo salário é R$${ad.toFixed(2).replace(".",",")}`)
+        }
+        else{
+            alert("Resposta invalida!")
+        }
+    }
+    else if(desejo=="n"){
+        alert(`Ok, seu salario é R$${salario}`)
+    }
+    else{
+        alert("Resposta invalida!")
     }
     
     
