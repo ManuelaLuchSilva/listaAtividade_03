@@ -12,6 +12,17 @@
     */
 
     // Entrada
+    const desejo= prompt("Deseja receber auxílio transporte?").trim().toLowerCase
+    if(desejo=="sim"||desejo=="s"){
+        const salario= prompt("Qual seu salario?").trim().replace(" ,", ".")
+        const locomocao = prompt("Qual seu meio de locomoção? (veiculo proprio=(vp),transporte publico=(tp))").trim().toLowerCase()
+        if(locomocao=="vp"){
+            let n = salario-(salario*0.06)
+            let ad = n + 200
+            alert(``)
+        }
+    }
+    
     
     // Processamento
 
