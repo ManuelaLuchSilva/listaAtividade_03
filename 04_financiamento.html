@@ -10,8 +10,22 @@
     */
 
     // Entrada
+    const imovel = prompt("Qual o valor do imovel?").replace(",", ".").trim();
+    const anos = prompt("Por quantos anos será pago?").trim();
+    const salario = prompt("Qual o salário?").replace(",", ".").trim();
     
     // Processamento
+    let por = salario +(salario*0.3)
+    let mensal = imovel / anos
+    if(isNaN(anos) ||isNaN(salario)||isNaN(imovel)){
+        alert("Resposta Invalida")
+    }
+    else if(mensal>por){
+        alert(`O valor do financiamento é de R$${mensal}, e não pode ser concedida`)
+    }
+    else{
+        alert(`O valor do financiamento é de R$${mensal}, e pode ser concedida`)
+    }
 
     // Saída
 

@@ -11,8 +11,23 @@
     */
 
     // Entrada
+    const dist = prompt("Quantos quilometros tem a viagem?")
+    const km = prompt("Quantos km pretende viajar por dia?")
     
     // Processamento
+    let dia = dist/km
+    if(dia >= 1 && dia <=3){
+        alert("Poderá ser realizada em qualquer período.")
+    }
+    else if(dia>3 && dia<=10){
+        alert("Poderá ser realizada nas férias de julho.")
+    }
+    else if(dia>10 && dia<=20){
+        alert("Poderá ser realizada nas férias de verão.")
+    }
+    else if(dia>20){
+        alert(`Deverá trabalhar remoto, durará ${dia} dias.`)
+    }
 
     // Saída
 

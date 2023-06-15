@@ -15,8 +15,40 @@
     */
 
     // Entrada
+    const cargo = ("Qual seu cargo?(Cobrador,Motorista)").trim().toLowerCase
+    const viagem = ("Quantas viagens são realizadas por dia?").trim()
     
     // Processamento
+    if (cargo=="motorista"){
+        if(viagem <= 10){
+            let n = 100 + (100*0.2)
+            alert(`Seu cargo é ${cargo}, e o valor pelas viagens realizadas é e R$${n.toFixed(2).replace(".", ",")}`)
+        }
+        else if(viagem>10){
+            let n = Math.round( 100 + (100*0.35))
+            alert(`Seu cargo é ${cargo}, e o valor pelas viagens realizadas é e R$${n.toFixed(2).replace(".", ",")}`)
+        }
+        else {
+            
+            alert(`Resposta Invalida!`)
+        }
+    }
+    else if (cargo=="cobrador"){
+        if(viagem <= 10){
+            alert(`Seu cargo é ${cargo}, e o valor pelas viagens realizadas é e R$100,00`)
+        }
+        else if(viagem>10){
+            let n = Math.round(100 + (100*0.1))
+            alert(`Seu cargo é ${cargo}, e o valor pelas viagens realizadas é e R$${n.toFixed(2).replace(".", ",")}`)
+        }
+        else {
+            
+            alert(`Resposta Invalida!`)
+        }
+    }
+    else{
+        alert("Resposta Invalida!")
+    }
 
     // Saída
 
