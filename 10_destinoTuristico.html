@@ -12,9 +12,29 @@
     */
 
     // Entrada
+    const precoAS = Number(prompt("Valor do transporte aéreo para São Paulo").trim().replace(",", "."))
+    const precoHS = Number(prompt("Valor do hotel em São Paulo").trim().replace(",", "."))
+    const diasS = Number(prompt("Quantos dias pretende ficar em ").trim().replace(",", "."))
+
+    const precoAR = Number(prompt("Valor do transporte aéreo para Rio de Janeiro").trim().replace(",", "."))
+    const precoHR = Number(prompt("Valor do hotel em Rio de Janeiro").trim().replace(",", "."))
+    const diasR = Number(prompt("Quantos dias pretende ficar em Rio de Janeiro").trim().replace(",", "."))
     
     // Processamento
+    let precoS = precoAS + (precoHS * diasS)
+    let precoR = precoAR + (precoHR * diasR)
 
     // Saída
+    if (isNaN(precoAS) || isNaN(precoHS) || isNaN(diasS) || isNaN(precoAR) || isNaN(precoHR) || isNaN(diasS)){
+        alert("Invalido, coloque apenas números")
+    }
+    else{
+        if (precoS<precoR){
+            alert(`R$${precoS.replace(".",",")}, São Paulo`)
+        }
+        else{
+            alert(`R$${precoS.replace(".",",")}, Rio de Janeiro`)
+        }
+    }
 
 </script>

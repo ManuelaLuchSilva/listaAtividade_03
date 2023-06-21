@@ -12,9 +12,28 @@
     */
 
     // Entrada
+    const valor = Number(prompt("Qual o valor?").trim().replace(",","."))
+    const formaP = prompt("Qual a forma de pagamento?((B)Boleto;(D)Dinheiro;(P)PIX)").trim().toUpperCase()
     
     // Processamento
-
+    if(isNaN(valor)||!isNaN(formaP)){
+        alert("Invalido")
+    }
+    else{
+         if (formaP == 'B'){
+            let pag = valor-(valor*0.03)
+            alert(`R$${pag.replace(".",',')}`)
+        }
+        else if (formaP == 'D'){
+            let pag = valor-(valor*0.05)
+            alert(`R$${pag.replace(".",',')}`)
+        }
+        else{
+            let pag = valor-(valor*0.1)
+            alert(`R$${pag.replace(".",',')}`)
+        }
+    }
+       
     // Saída
 
 </script>
